@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  font-size: 11px;
+}
+
+body {
+  background: rgb(16, 6, 47);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 6, 47, 1) 10%,
+    rgba(157, 62, 154, 1) 100%
+  );
+}
+
+/* ===== Content ===== */
+nav h1 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+form input {
+  height: 3.5rem;
+  border-radius: 0.5rem;
+}
+
+#userInput {
+  color: black;
+  padding-left: 1rem;
+  width: 15rem;
+  font-size: 1.2rem;
+}
+
+#searchGif {
+  background: #696969;
+  color: aliceblue;
+}
+
+#removeGif {
+  background-color: #d62323;
+  color: aliceblue;
+}
+
+.memeContainer {
+  display: flexbox;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.memeContainer img {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 400px;
+}
