@@ -12,16 +12,20 @@ async function findGif(e) {
   //Base case for search input
   if ($searchText.val() == "") return alert("Please enter a search");
 
-  let searchVal = $("#userInput").val();
-  const res = await axios.get("https://api.giphy.com/v1/gifs/search", {
-    params: { q: searchVal, api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym" },
-  });
-
-  //Add Images to memeContainer
-  addGif(res.data);
-
-  //Clear settings
+  let searchVal = $searchText.val();
+  //clear textarea
   $searchText.val("");
+  try {
+    const res = await axios.get("https://api.giphy.com/v1/gifs/search", {
+      params: { q: searchVal, api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym" },
+    });
+    //Add Images to memeContainer
+    addGif(res.data);
+    //Clear settings
+    $searchText.val("");
+  } catch (error) {
+    alert(error);
+  }
 }
 
 //Function handlers
