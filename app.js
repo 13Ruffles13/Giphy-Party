@@ -21,8 +21,6 @@ async function findGif(e) {
     });
     //Add Images to memeContainer
     addGif(res.data);
-    //Clear settings
-    $searchText.val("");
   } catch (error) {
     alert(error);
   }
